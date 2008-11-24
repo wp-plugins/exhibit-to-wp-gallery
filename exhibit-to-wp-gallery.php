@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: Exhibit to WP Gallery
- Plugin URI: 
+ Plugin URI: http://wordpress.org/extend/plugins/exhibit-to-wp-gallery/
  Description: Convert your ancient <a href="http://www.google.se/search?q=Owen+Winkler's+Exhibit">Exhibit 1.1b</a> galleries to <a href="http://wordpress.org/development/2008/03/wordpress-25-brecker/">modern</a> WP attachments/<a href="http://codex.wordpress.org/Using_the_gallery_shortcode">galleries</a>
  Version: 0.001
  Author: Ulf Benjaminsson
@@ -164,7 +164,7 @@ function ex2gal_option_page() {
 		?>		
 		<tr class="alternate"><td><label>Begin from Post ID: <input type="text" value="<?php echo $_POST['beginfromid']; ?>" name="beginfromid" size="5" /></label><span style='font-size:xx-small;'> The highest post id is: <?php echo $wpdb->get_var("SELECT MAX(post_ID) FROM {$exc->tableexhibit}"); ?></span></td></tr>
 		<tr class="alternate"><td><label>Max rows per batch (<100 should be safe): <input type="text" value="<?php echo $_POST['max']; ?>" name="max" size="5" /></label><span style='font-size:xx-small;'> You've got <?php echo $wpdb->get_var("SELECT COUNT(*) FROM {$exc->tableexhibit}"); ?> rows in your exhibit table</span></td></tr>
-		<tr class="alternate"><td><label>Use old captions as description too: <input type="checkbox" name="captions_to_description" value="1" <?php if($captions_to_description){ echo "checked";} ?> /></label><span style='font-size:xx-small;'> See screenshot 3.</font></td></tr>
+		<tr class="alternate"><td><label>Use old captions as description too: <input type="checkbox" name="captions_to_description" value="1" <?php if($captions_to_description){ echo "checked";} ?> /></label><span style='font-size:xx-small;'><a href="http://wordpress.org/extend/plugins/exhibit-to-wp-gallery/screenshot-3.png"> See screenshot 3.</a></font></td></tr>
 		<tr class="alternate">		
 		<td><input type="submit" name="submit" title="Press the button and let the page load. It will take forever. :)" value="<?php _e('Commence...') ?>" />
 		<input type="submit" name="post_list" title="Prints a list of all posts that uses Exhibit." value="<?php _e('Gimme a post list plx...') ?>" /></td>
