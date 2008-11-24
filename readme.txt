@@ -36,10 +36,10 @@ I recommend you read the source code of the plugin before running it. It has onl
 = What's 'exhibit_1.1b_for_WP2.1+.zip' for? =
 You need to have Exhibit running for the conversion to work. The original Exhibit wont run on WordPress 2.1 or newer though, so I included a patched version of Exhibit 1.1b, enabled to run on WordPress up to 2.6.3. (use your original configuration files, or remember to edit the included ones)
 
-= Why *attachments* and not [insert your favorite gallery plugin here] =
+= Why *attachments* and not [insert your favorite gallery plugin] =
 Exhibit was the only *proper* solution back in those days - way before Wordpress even had file uploading capabilities. With only small modifications it has kept on working over **ten** major wordpress releases!
 
-But all plugins are bound to become outdated. The only sane *long term solution* is to use the core WP functions. Get yourself a plugin that is built *on top* of those, and you'll always have a safe fallback.
+But *all* plugins are bound to become outdated. The only sane *long term solution* is to use the core WP functions. Get yourself a plugin that is built *on top* of those, and you'll always have a safe fallback.
 
 == Screenshots ==
 
