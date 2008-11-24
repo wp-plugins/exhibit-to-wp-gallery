@@ -24,7 +24,7 @@ Check the [screenshots](http://wordpress.org/extend/plugins/exhibit-to-wp-galler
 == Installation ==
 [Backup](http://codex.wordpress.org/WordPress_Backups) both the filesystem and database before running the conversion!
 
-1. Make sure you're hosted on a linux server. (requires [file](http://tinyurl.com/64bycp)
+1. Make sure you're hosted on a linux server. (requires [file](http://tinyurl.com/64bycp))
 1. Extract `exhibit-to-wp-gallery.php` and transfer it to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Visit "Exhibit to WP Gallery" in "Settings" and follow the instructions.
@@ -33,13 +33,13 @@ I recommend you read the source code of the plugin before running it. It has onl
 
 == Frequently Asked Questions ==
 
-= What's 'exhibit_1.1b_for_WP2.1+.zip'? =
+= What's 'exhibit_1.1b_for_WP2.1+.zip' for? =
 You need to have Exhibit running for the conversion to work. The original Exhibit wont run on WordPress 2.1 or newer though, so I included a patched version of Exhibit 1.1b, enabled to run on WordPress up to 2.6.3. (use your original configuration files, or remember to edit the included ones)
 
-= Why *attachments* and not [insert your favorite gallery plugin here] =
-All plugins are bound to become outdated - it's what got us into this mess in the first place!\* The only sane *long term solution* is to use the core WP functions. Get yourself a plugin that is built *on top* of those, and you'll always have a safe fallback.
+= Why *attachments* and not [insert your favorite gallery plugin] =
+Exhibit was the only *proper* solution back in those days - way before Wordpress even had file uploading capabilities. With only small modifications it has kept on working over **ten** major wordpress releases!
 
-\* No offense to Mr Winkler though! Exhibit was the *only* proper solution back in those days - way before Wordpress even had file uploading capabilities. With only small modifications it has kept on working over **ten** major wordpress releases!
+But *all* plugins are bound to become outdated. The only sane *long term solution* is to use the core WP functions. Get yourself a plugin that is built *on top* of those, and you'll always have a safe fallback.
 
 == Screenshots ==
 
