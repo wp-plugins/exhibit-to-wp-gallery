@@ -9,7 +9,7 @@ Stable tag: 0.001
 Convert your ancient Exhibit 1.1b galleries to modern WordPress attachments / galleries
 
 == Description ==
-Exhibit to WP Gallery can convert your *ancient* [Exhibit 1.1b](http://redalt.com/downloads/)-galleries to normal WordPress attachments. Requires a linux host.
+Exhibit to WP Gallery can convert your *ancient* [Exhibit 1.1b](http://redalt.com/downloads/) entries to normal WordPress attachments. Requires a linux host.
 
 * Captions and image order will be transferred.
 * All files will be *copied* to your upload folder. (use [Custom Upload Dir](http://wordpress.org/extend/plugins/custom-upload-dir/) for better structure!)
