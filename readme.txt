@@ -24,7 +24,7 @@ Check the [screenshots](http://wordpress.org/extend/plugins/exhibit-to-wp-galler
 == Installation ==
 [Backup](http://codex.wordpress.org/WordPress_Backups) both the filesystem and database before running the conversion!
 
-1. Make sure you're hosted on a linux server. (requires [file](http://en.wikipedia.org/wiki/File_(Unix))
+1. Make sure you're hosted on a linux server. (requires [file](http://tinyurl.com/64bycp)
 1. Extract `exhibit-to-wp-gallery.php` and transfer it to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Visit "Exhibit to WP Gallery" in "Settings" and follow the instructions.
