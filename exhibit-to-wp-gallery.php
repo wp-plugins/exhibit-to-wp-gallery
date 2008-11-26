@@ -28,13 +28,15 @@ function ex2gal_get_plugin_data( $param = null ){
 }
 
 function ex2gal_add_admin_footer(){ //shows some plugin info at the footer of the config screen.
-	$plugin_data = ex2gal_get_plugin_data();
-	printf('%1$s plugin | Version %2$s | by %3$s<br />', $plugin_data['Title'], $plugin_data['Version'], $plugin_data['Author']);
+	$plugin_data = ex2gal_get_plugin_data();	
+	printf('%1$s plugin | Version %2$s | by %3$s', $plugin_data['Title'], $plugin_data['Version'], $plugin_data['Author']);
+	echo ' (who <a href="http://www.amazon.com/gp/registry/wishlist/2QB6SQ5XX2U0N/105-3209188-5640446?reveal=unpurchased&filter=all&sort=priority&layout=standard&x=21&y=17">appreciates books</a>) :)<br />';
 }
 
 function ex2gal_add_option_page() {
 	if ( function_exists('add_options_page') ) {
-		add_options_page(ex2gal_get_plugin_data('Title').' Settings', 'Exhibit to WP Gallery', 8, __FILE__, 'ex2gal_option_page');
+		$plug_name = ex2gal_get_plugin_data('Name');
+		add_options_page($plug_name.' Settings', $plug_name, 8, __FILE__, 'ex2gal_option_page');
 		add_filter('plugin_action_links', 'ex2gal_add_plugin_actions', 10, 2 );
 	}
 }
@@ -62,7 +64,7 @@ function ex2gal_option_page() {
 	if(function_exists('exhibit_is_installed') && exhibit_is_installed()){
 		$exc = new ex_config();
 	}
-	$plug_title = ex2gal_get_plugin_data('Title');
+	$plug_title = ex2gal_get_plugin_data('Name');
 	$siteurl = get_option('siteurl');	
 	$captions_to_description = isset($_POST['captions_to_description']) ? 1 : 0; //true; //will put the Exhibit caption text in the "decription" field of your attachment.
 	$gallery_string = $wpdb->escape('<br />[gallery]');
@@ -162,8 +164,8 @@ function ex2gal_option_page() {
 			}
 		}		
 		?>		
-		<tr class="alternate"><td><label>Begin from Post ID: <input type="text" value="<?php echo $_POST['beginfromid']; ?>" name="beginfromid" size="5" /></label><span style='font-size:xx-small;'> The highest post id is: <?php echo $wpdb->get_var("SELECT MAX(post_ID) FROM {$exc->tableexhibit}"); ?></span></td></tr>
-		<tr class="alternate"><td><label>Max rows per batch (<100 should be safe): <input type="text" value="<?php echo $_POST['max']; ?>" name="max" size="5" /></label><span style='font-size:xx-small;'> You've got <?php echo $wpdb->get_var("SELECT COUNT(*) FROM {$exc->tableexhibit}"); ?> rows in your exhibit table</span></td></tr>
+		<tr class="alternate"><td><label>Begin from Post ID: <input type="text" value="<?php echo $_POST['beginfromid']; ?>" name="beginfromid" size="5" /></label><span style='font-size:xx-small;'> <?php $count = $wpdb->get_var("SELECT MAX(post_ID) FROM {$exc->tableexhibit}"); echo ($count) ? "The highest post id is: $count" : 'Exhibit is not installed.'; ?></span></td></tr>
+		<tr class="alternate"><td><label>Max rows per batch (<100 should be safe): <input type="text" value="<?php echo $_POST['max']; ?>" name="max" size="5" /></label><span style='font-size:xx-small;'> <?php $count = $wpdb->get_var("SELECT COUNT(*) FROM {$exc->tableexhibit}"); echo ($count) ? "You've got $count rows in your exhibit table." : 'Exhibit is not installed'; ?> </span></td></tr>
 		<tr class="alternate"><td><label>Use old captions as description too: <input type="checkbox" name="captions_to_description" value="1" <?php if($captions_to_description){ echo "checked";} ?> /></label><span style='font-size:xx-small;'><a href="http://wordpress.org/extend/plugins/exhibit-to-wp-gallery/screenshot-3.png"> See screenshot 3.</a></font></td></tr>
 		<tr class="alternate">		
 		<td><input type="submit" name="submit" title="Press the button and let the page load. It will take forever. :)" value="<?php _e('Commence...') ?>" />
