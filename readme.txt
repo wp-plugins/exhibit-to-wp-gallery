@@ -4,7 +4,7 @@ Donate link: http://www.amazon.com/gp/registry/wishlist/2QB6SQ5XX2U0N/105-320918
 Tags: exhibit, gallery, convert, migrate, owen, winkler,  
 Requires at least: 2.6.3
 Tested up to: 2.6.3
-Stable tag: 0.001
+Stable tag: 0.002
 
 Convert your ancient Exhibit 1.1b galleries to modern WordPress attachments / galleries
 

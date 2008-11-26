@@ -3,7 +3,7 @@
  Plugin Name: Exhibit to WP Gallery
  Plugin URI: http://wordpress.org/extend/plugins/exhibit-to-wp-gallery/
  Description: Convert your ancient <a href="http://www.google.se/search?q=Owen+Winkler's+Exhibit">Exhibit 1.1b</a> galleries to <a href="http://wordpress.org/development/2008/03/wordpress-25-brecker/">modern</a> WP attachments/<a href="http://codex.wordpress.org/Using_the_gallery_shortcode">galleries</a>
- Version: 0.001
+ Version: 0.002
  Author: Ulf Benjaminsson
  Author URI: http://www.ulfben.com/
  */
