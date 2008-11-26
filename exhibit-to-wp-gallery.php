@@ -34,7 +34,7 @@ function ex2gal_add_admin_footer(){ //shows some plugin info at the footer of th
 
 function ex2gal_add_option_page() {
 	if ( function_exists('add_options_page') ) {
-		add_options_page(ex2gal_get_plugin_data('Title').' Settings', ex2gal_get_plugin_data('Title'), 8, __FILE__, 'ex2gal_option_page');
+		add_options_page(ex2gal_get_plugin_data('Title').' Settings', 'Exhibit to WP Gallery', 8, __FILE__, 'ex2gal_option_page');
 		add_filter('plugin_action_links', 'ex2gal_add_plugin_actions', 10, 2 );
 	}
 }
