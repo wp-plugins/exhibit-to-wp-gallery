@@ -47,7 +47,7 @@ function ex2gal_add_plugin_actions($links, $file){ //add's a "Settings"-link to 
 		$this_plugin = plugin_basename(__FILE__);
 	}	
 	if($file == $this_plugin){				
-		$settings_link = $settings_link = '<a href="options-general.php?page=exhibit-to-wp-gallery.php">' . __('Settings') . '</a>';
+		$settings_link = $settings_link = '<a href="options-general.php?page='.$this_plugin.'">' . __('Settings') . '</a>';
 		array_unshift($links, $settings_link);	
 	}
 	return $links;
